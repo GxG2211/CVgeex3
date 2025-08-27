@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generador de CV - CVExpress.AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #264d94;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #264d94;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    button {
+      margin-top: 1.5rem;
+      background: #264d94;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1a356b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generador de CV - CVExpress.AI</h1>
+
+  <form action="/generar" method="POST" enctype="multipart/form-data">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="titulo">Título profesional o cargo:</label>
+    <input type="text" id="titulo" name="titulo" required />
+
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad" name="ciudad" required />
+
+    <label for="nacimiento">Fecha de nacimiento:</label>
+    <input type="date" id="nacimiento" name="nacimiento" />
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required />
+
+    <label for="web">Página web o LinkedIn:</label>
+    <input type="text" id="web" name="web" />
+
+    <label for="perfil">Perfil profesional (breve resumen):</label>
+    <textarea id="perfil" name="perfil" required></textarea>
+
+    <label for="educacion">Educación (carreras, cursos, fechas):</label>
+    <textarea id="educacion" name="educacion" required></textarea>
+
+    <label for="experiencia">Experiencia laboral (puestos, empresas, fechas):</label>
+    <textarea id="experiencia" name="experiencia" required></textarea>
+
+    <label for="habilidades">Habilidades (técnicas, blandas):</label>
+    <textarea id="habilidades" name="habilidades" required></textarea>
+
+    <label for="idiomas">Idiomas (nivel):</label>
+    <textarea id="idiomas" name="idiomas" required></textarea>
+
+    <label for="foto">Foto de perfil:</label>
+    <input type="file" id="foto" name="foto" accept="image/png, image/jpeg" />
+
+    <button type="submit">Generar CV en PDF</button>
+  </form>
+</body>
+</html>
